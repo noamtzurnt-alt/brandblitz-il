@@ -32,10 +32,40 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# local python/venv (used for tooling)
+.venv*/
+__pycache__/
+
+# common credential / key file names
+**/*serviceAccount*.json
+**/*service-account*.json
+**/*firebase-adminsdk*.json
+**/*adminsdk*.json
+*.p12
+*.key
+
+# local temp artifacts
+_tmp*.pdf
 
 # vercel
 .vercel
 
+# firebase local state / logs
+.firebase/
+firebase-debug.log
+firestore-debug.log
+.runtimeconfig.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large media files (audio / video) — keep out of git
+public/**/*.mp3
+public/**/*.wav
+public/**/*.flac
+public/**/*.mp4
+public/**/*.mov
+public/**/*.webm
